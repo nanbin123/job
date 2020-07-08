@@ -1,0 +1,94 @@
+<!--pages/projectExperienceContent/projectExperienceContent.wxml-->
+<view class="workExperienceTitle">
+	<view class="workExperienceTitles">
+		<text class="titleT">项目经验</text>
+		<text class="titleB">从最近的开始写呦</text>
+	</view>
+	<view class="content">
+		<view class="nav">
+			<text class="text">项目名称</text>
+			<view class="page-section">
+				<view class="weui-cells weui-cells_after-title">
+					<view class="weui-cell weui-cell_input">
+						<input class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请填写项目名称" />
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="nav">
+			<text class="text">项目角色</text>
+			<view class="page-section">
+				<view class="weui-cells weui-cells_after-title">
+					<view class="weui-cell weui-cell_input">
+						<input class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请填写项目角色" />
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="nav">
+			<text class="text">项目描述</text>
+			<view class="page-section">
+				<view class="weui-cells weui-cells_after-title">
+					<view class="weui-cell weui-cell_input">
+						<input class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请填写项目描述" />
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="nav">
+			<text class="text">项目业绩</text>
+			<view class="page-section">
+				<view class="weui-cells weui-cells_after-title">
+					<view class="weui-cell weui-cell_input">
+						<input class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请填写项目业绩" />
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- <view class="nav">
+      <text class="text">项目时间</text>
+      <view class="page-section">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <input class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请填写项目时间" />
+          </view>
+        </view>
+      </view>
+    </view> -->
+		<view class="section">
+
+			<view class="picker">
+				<view class="nav">
+					<text class="text">项目时间</text>
+					<view class="input">
+						<picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+							<view class="page-section">
+								<view class="weui-cells weui-cells_after-title">
+									<view class="weui-cell weui-cell_input">
+										<input name="salary" class="weui-input2" maxlength="10" bindinput="bindKeyInput" placeholder="请选择开始时间" value="{{multiArray[0][multiIndex[0]]}}{{multiArray[1][multiIndex[1]]}}" disabled="true" />
+									</view>
+								</view>
+							</view>
+						</picker>
+
+						<picker mode="multiSelector" bindchange="bindMultiPickerChange1" value="{{multiIndex1}}" range="{{multiArray1}}">
+							<view class="page-section">
+								<view class="weui-cells weui-cells_after-title">
+									<view class="weui-cell weui-cell_input">
+										<input name="salary" class="weui-input1" maxlength="10" bindinput="bindKeyInput" placeholder="请选择结束时间" value="{{multiArray1[0][multiIndex1[0]]}}-{{multiArray1[1][multiIndex1[1]]}}" disabled="true" />
+									</view>
+								</view>
+							</view>
+						</picker>
+					</view>
+				</view>
+			</view>
+
+		</view>
+
+	</view>
+	<view class="button">
+		<button class="button1" form-type="submit">删除</button>
+		<button class="button2" form-type="submit">确定</button>
+	</view>
+</view>

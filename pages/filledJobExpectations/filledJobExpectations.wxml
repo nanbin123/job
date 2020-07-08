@@ -1,0 +1,87 @@
+<!--pages/filledJobExpectations/filledJobExpectations.wxml-->
+<view class="jobExpectations">
+	<view class="jobExpectationsTitle">
+		<text class="titleT">求职期望</text>
+		<text class="titleB">添加您理想型的职位吧</text>
+	</view>
+	<form bindsubmit="formSubmit" bindreset="formReset">
+		<view class="content">
+			<view class="nav" bindtap="toPositionClassification">
+				<text class="text">期望职位</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="position" class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请选择期望职位" disabled="true" value="{{positionName}}" />
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="section">
+				<view class="gender">
+					<text class="gendertext">职位类别</text>
+					<radio-group class="radio-group" bindchange="radioChange">
+						<radio class="radio" color="#ad3434" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+							<text class="gendertext1">{{item.value}}</text>
+						</radio>
+					</radio-group>
+				</view>
+			</view>
+			<!-- <view class="nav">
+				<text class="text">期望行业</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请选择期望行业" />
+						</view>
+					</view>
+				</view>
+			</view> -->
+			<view class="nav" bindtap="todetailcity">
+				<text class="text">工作地址</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请选择工作城市" disabled="true" value="{{city}}" />
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="section">
+				<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+					<view class="picker">
+						<view class="nav">
+							<text class="text">薪资要求</text>
+							<view class="page-section">
+								<view class="weui-cells weui-cells_after-title">
+									<view class="weui-cell weui-cell_input">
+										<input name="salary" class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请选择薪资要求" value="{{salary}}" disabled="true" />
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</picker>
+			</view>
+			<!-- <view class="section">
+				<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" rangeKey="name" value="{{multiIndex}}" range="{{multiArray}}">
+					<view class="picker">
+						<view class="nav">
+							<text class="text">薪资要求</text>
+							<view class="page-section">
+								<view class="weui-cells weui-cells_after-title">
+									<view class="weui-cell weui-cell_input">
+										<input name="salary" class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请选择薪资要求" value="{{salary}}" disabled="true" />
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</picker>
+			</view> -->
+		</view>
+		<view class="button">
+			<!-- <button class="button1" form-type="reset">重置</button> -->
+			<button class="button2" form-type="submit" bindtap="checkSave">确定</button>
+		</view>
+	</form>
+</view>

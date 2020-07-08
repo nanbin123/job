@@ -1,0 +1,242 @@
+/* pages/detailPage/detailPage.wxss */
+
+/* 职位详情 */
+
+/* 头部 */
+
+page {
+  background: #fff;
+}
+
+.detailPageContainer {
+  width: 100%;
+  height: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.Header {
+  width: 100%;
+  padding-bottom:20rpx ;
+  border-bottom: 4rpx solid #ededed;
+}
+
+.JobcontentTitle {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20rpx;
+}
+
+.jobTitle {
+  width: 500rpx;
+  color: black;
+  font-size: 48rpx;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 10rpx;
+  overflow: hidden;
+}
+
+.salary {
+  color: rgb(7, 165, 91);
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.GeneralQualifications {
+  width: 100%;
+  overflow: hidden;
+}
+
+.demand {
+  font-size: 32rpx;
+  color: #676767;
+  margin-right: 30rpx;
+  display: inline-block;
+}
+
+.applicant {
+  width: 100%;
+  height: 200rpx;
+  line-height: 100rpx;
+  border-bottom: 4rpx solid #ededed;
+}
+
+.headPortrait {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  margin-top: 45rpx;
+  float: left;
+  margin-left: 10rpx;
+}
+
+.Recruitmentname {
+  height: 70rpx;
+  font-size: 36rpx;
+  color: #323232;
+  display: block;
+  font-weight: bold;
+  padding-top: 20rpx;
+}
+
+.position {
+  display: inline-block;
+  font-size: 30rpx;
+  font-family: serif;
+  font-weight: 600;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  border-bottom: 4rpx solid #ededed;
+  position: relative;
+}
+
+.navTitle {
+  font-weight: bold;
+  font-size: 38rpx;
+  margin-left: 10rpx;
+  padding-top: 38rpx;
+  display: block;
+}
+.wares-lists {
+	overflow: hidden;
+	transition: all 0.2s linear;
+}
+.more{
+  width: 750rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  color: #36c1ba;
+  position: absolute;
+  left: 0;
+  bottom: 0rpx;
+  background: white;
+  text-align: center;
+  line-height: 70rpx;
+  
+}
+.navContent {
+  font-size: 32rpx;
+  color: #5e5e5e;
+  padding-bottom: 20rpx;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  font-size: 30rpx;
+  color: #676767;
+  background: #f5f5f5;
+  margin: 20rpx 0rpx 10rpx 0;
+  padding: 10rpx 20rpx;
+  display: inline-block;
+  border-radius: 8rpx;
+}
+
+.corporateInformation {
+  widows: 100%;
+  height: 280rpx;
+  border-bottom: 4rpx solid #ededed;
+}
+
+.corporateInformationTitle {
+  height: 70rpx;
+  font-size: 36rpx;
+  color: #323232;
+  display: block;
+  font-weight: bold;
+  padding-top: 20rpx;
+  margin-left: 10rpx;
+}
+
+.companyPortrait {
+  width: 110rpx;
+  height: 110rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  float: left;
+  margin-left: 10rpx;
+}
+
+.companyName {
+  font-size: 36rpx;
+  color: #323232;
+  display: block;
+  font-weight: bold;
+  padding-top: 20rpx;
+}
+
+.intro {
+  display: inline-block;
+  font-size: 30rpx;
+  font-family: serif;
+  font-weight: 600;
+  color: #676767;
+}
+.workAddress{
+  widows: 100%;
+  height: 320rpx;
+
+}
+.workAddressTitle{
+  height: 70rpx;
+  font-size: 36rpx;
+  color: #323232;
+  display: block;
+  font-weight: bold;
+  padding-top: 20rpx;
+  margin-left: 10rpx;
+}
+.workAddressContent{
+  display: block;
+  font-size: 32rpx;
+  color: #676767;
+  margin-left: 10rpx;
+  font-weight: 500;
+  border-bottom: 4rpx solid #ededed;
+  padding-bottom: 50rpx;
+
+}
+.footer{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* border-top: 4rpx solid #ededed; */
+  background: white;
+  padding-top: 20rpx;
+}
+.fenxiang{
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.button1{
+  width: 100%;
+  display: block;
+
+
+}
+.item1{
+  font-size: 30rpx;
+  display: inline-block;
+}
+.button2{
+  width: 90%;
+  height: 100rpx;
+  background: #d3361a;
+  line-height: 100rpx;
+  color: white;
+  font-size: 40rpx;
+}

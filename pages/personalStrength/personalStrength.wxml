@@ -1,0 +1,19 @@
+<!--pages/personalStrength/personalStrength.wxml-->
+<!-- 个人优势 -->
+<view class="personalStrength">
+  <view class="personalStrengthTitle">
+    <text class="titleT">我的优势</text>
+    <text class="titleB">一句话介绍自己，突出自己的核心优势</text>
+  </view>
+  <form bindsubmit="bindFormSubmit">
+
+    <view class="section">
+      <textarea name="advantage" placeholder="简单介绍一下自己吧~"  disable-default-padding="true" value="{{advantage}}"/>
+      <view class="button">
+        <button formType="submit"> 提交 </button>
+
+      </view>
+    </view>
+  </form>
+
+</view>

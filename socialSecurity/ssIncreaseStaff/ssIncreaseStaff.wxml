@@ -1,0 +1,120 @@
+<!--socialSecurity/ssIncreaseStaff/ssIncreaseStaff.wxml-->
+<view class="container">
+  <view class="logo"></view>
+  <form class="form">
+    <text class="info">五险一金增员申报2020.7月</text>
+        <view class="form-item" >
+          <text class="label" >会员名</text>
+          <input class="input-text" placeholder="请填写下单用户名"></input>
+        </view>
+        <view class="form-item" >
+          <text class="label" >操作类型</text>
+          <checkbox-group bindchange="checkboxChange">
+              <checkbox value='football'>增员（缴当月）</checkbox>
+              <checkbox value='basketball'>补缴</checkbox>
+          </checkbox-group>
+        </view>
+        <view class="form-item" >
+          <text class="label" >姓名</text>
+          <input class="input-text" placeholder="请填写您的姓名"></input>
+        </view>
+        <view class="form-item" >
+          <text class="label" >身份证号</text>
+          <input class="input-text" placeholder="请填写您的真实身份证号"></input>
+        </view>
+         <view class="form-item" >
+          <text class="label" >年龄</text>
+          <text class="explain age">目前仅能受理女45岁以下，男50岁以下人员办理</text>
+          <input class="input-text" placeholder="请填写您的年龄"></input>
+        </view>
+        <view class="form-item" >
+          <text class="label" >户口性质</text>
+          <input class="input-text" placeholder="请选择户口性质"></input>
+        </view>
+        <view class="form-item" >
+          <text class="label" >联系电话</text>
+          <input class="input-text" placeholder="请填写您的联系电话"></input>
+        </view>
+        <view class="form-item" >
+          <text class="label" >职业</text>
+          <input class="input-text"></input>
+        </view>
+        <view class="form-item" >
+          <text class="label">对接客服ID</text>
+          <input class="input-text"></input>
+        </view>
+        <view class="form-item" >
+          <text class="label">委托缴费时间</text>
+          <text class="explain age">如需委托交2018年11月，时间则输入:2018-11-01</text>
+          <input class="input-text"></input>
+        </view>
+        <view class="form-item" >
+          <text class="label">服务费付款方式</text>
+          <radio-group class="radio" bindChange="updataRadio">
+            <view wx:for="{{loves}}">
+              <radio value="{{item.id}}" checked="{{item.checked}}">{{item.name}}</radio>
+            </view>
+          </radio-group>
+        </view>
+        <view class="form-item" >
+          <text class="label">缴费地区</text>
+          <checkbox-group bindchange="checkboxChange">
+              <checkbox value='football'>北京(不指定区县/无区县要求)</checkbox>
+              <checkbox value='basketball'>外省地区(请联系客服)</checkbox>
+          </checkbox-group>
+        </view>
+        <view class="form-item" >
+          <text class="label">特殊要求留言</text>
+          <text class="explain time">特殊留言请在下方备注，如需补缴请留言补缴年月</text>
+           <textarea class="textarea-text"/>
+        </view>
+        <view class="form-item" >
+          <text class="label" >参保人请知晓确认以下事宜:</text>
+          <checkbox-group bindchange="checkboxChange">
+            <view class="checkbox-item">
+              <checkbox class="cb"></checkbox>
+              <text>*本店仅受参保人委托办理代缴业务，但不受理大病、特殊病、在服刑期或已怀孕人员参保；如隐瞒实情参保者需承担一切连带后果责任</text>
+            </view>
+            <view  class="checkbox-item">
+              <checkbox class="cb"></checkbox>
+              <text> *本店不办理医疗手工报销、不办理生育报销及津贴申领、不办理积分落户和退休业务、不办理孩子上学，不配合外出任何盖章材料。有此类需求者请勿拍费！</text>
+            </view>
+           <view  class="checkbox-item">
+            <checkbox class="cb"></checkbox>
+            <text> *我司缴费账户为随机安排，如涉及需指定区县缴费、或其他特殊办事要求请务必提前告知，并务必在上方特殊要求留言里备注！</text>
+          </view>
+           <view  class="checkbox-item">
+            <checkbox class="cb"></checkbox>
+            <text>*如次月需停缴，请务必下月5-25号期间通知我们办理停缴手续！如次月仍需缴费，请于每月20号之前完成拍费即可！</text>
+          </view>
+          </checkbox-group>
+        </view>
+        <view class="form-item" >
+          <text class="label">温馨提醒：</text>
+          <text class="p b" >1 :养老退休基本条件</text>
+          <text class="p" >到达法定退休年龄时，社保累计缴满15年（其中10年必须在京缴纳，且女40之前在京参保，男50岁之前在京参保。<text style="color:#ff0000">目前我司只受理代缴，不办理退休业务。</text></text>
+
+          <text class="p b" >2:小客车摇号条件</text>
+          <text class="p" >非京籍需要申请月往前连续缴纳5年社保和5年个税（社保补缴有效，个税补缴无效；<text style="color:#ff0000">个税可以断月不能断年且不能为0，建议每年至少交2个月的个税</text></text>
+
+          <text class="p b" >3:北京市购房条件</text>
+          <text class="p" >非京籍需要申请月往前连续正常缴纳5年社保或5年个税</text>
+
+
+          <text class="p b" >4:公积金贷款条件</text>
+          <text class="p" >申请住房公积金贷款前需要连续缴满12个月（申请当月不算）。</text>
+
+        </view>
+
+        <view class="form-item" >
+          <text class="label">参保人确认</text>
+            <radio-group class="radio" bindChange="updataRadio">
+              <view wx:for="{{confirm}}">
+                <radio value="{{item.id}}" checked="{{item.checked}}"></radio>
+                <text>{{item.name}}</text>
+              </view>
+            </radio-group>
+        </view>
+ 
+  </form>
+</view>

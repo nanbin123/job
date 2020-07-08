@@ -1,0 +1,113 @@
+.expect-wrap {
+    position: relative;    
+    height: 96rpx;
+    background-color: #d3361a;
+}
+.expect-wrap .search_box {
+  width: 750rpx;
+  position: relative;
+  top: 10rpx;
+}
+
+.expect-wrap .search_box .search_print {
+  display: block;
+  margin: 0 auto;
+  height: 76rpx;
+  width: 65%;
+  border-radius: 120rpx;
+  background-color: #fff;
+  font-size: 14px;
+  padding-right: 114rpx;
+  padding-left: 40rpx;
+}
+.expect-wrap .search_box .serach_btn {
+  position: absolute;
+  right: 78rpx;
+  top: 50%;
+  color: #5bd4c7;
+  font-size: 14px;
+  transform: translateY(-50%)
+}
+
+
+.filter-wrap {
+    position: relative;
+    display: flex;
+    height: 45px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #fff;
+}
+
+.filter-wrap:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    width: calc(100% - 40px);
+    height: 1px;
+    background-color: #ebebeb;
+    transform: scaleY(0.5);
+}
+
+.filter-wrap .btn-list {
+    display: flex;
+    margin-left: -10px;
+}
+
+.filter-wrap .btn-list .list-item {
+    font-size: 14px;
+    line-height: 45px;
+    color: #666;
+    padding: 0 10px;
+}
+
+.filter-wrap .btn-list .list-item:last-child {
+    margin-right: 0;
+}
+
+.filter-wrap .btn-list .list-item.active {
+    color: #333;
+    font-weight: bold;
+}
+
+.filter-wrap .tag-list {
+    display: flex;
+    font-size: 13px;
+}
+
+.filter-wrap .tag-list .list-item {
+    position: relative;
+    color: #666;
+    padding: 5px 16px 5px 12px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+
+.filter-wrap .tag-list .list-item:after {
+    content: "";
+    position: absolute;
+    transform: rotate(-45deg);
+    right: 7px;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+    border-top: 3px solid #c7c7c7;
+}
+
+.filter-wrap .tag-list .list-item:last-child {
+    margin-right: 0;
+}
+
+.filter-wrap .tag-list .list-item.active {
+    color: #12ada9;
+    background-color: #e7f7f7;
+}
+
+.filter-wrap .tag-list .list-item.active:after {
+    border-top-color: #12ada9;
+}

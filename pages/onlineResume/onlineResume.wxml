@@ -1,0 +1,152 @@
+<!--pages/onlineResume/onlineResume.wxml-->
+<view class="onlineResume">
+	<view class="personalInformation" wx:if="{{loginData}}">
+		<view class="personalcontent">
+			<text class="name" bindtap="newUser">{{listDatas.userName?listDatas.userName:'点击头像登录'}} <text class="titleIco2 iconfont icon-bianji"></text></text>
+			<text class="year">{{listDatas.workingLife}}年.{{listDatas.age}}岁.{{listDatas.userJobEducation[0].education}}</text>
+
+		</view>
+		<image class="userAvatar" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" bindtap="toUser" src="/image/tab/timg.jpg"></image>
+	</view>
+	<view class="personalInformation" wx:else="{{loginData}}">
+		<view class="personalcontent" bindtap='showRule'>
+			<text class="name">未登录/注册</text>
+			<text class="year">请点击头像登录</text>
+
+		</view>
+		<image class="userAvatar" bindtap='showRule' src="/image/tab/timg.jpg"></image>
+	</view>
+	<view class="personalStrength" bindtap="topersonalStrength" data-advantage="{{advantage}}">
+		<view class="title">
+			<text class="titleText"><text class="iconss iconfont icon-renqiniurenblue"></text>个人优势</text>
+			<text class="titleIco iconfont icon-bianji"></text>
+		</view>
+		<view class="Strength">
+			<text>{{advantage}}</text>
+		</view>
+	</view>
+	<view class="jobStatus">
+		<view class="title" bindtap="btnClick" data-flag='{{true}}'>
+			<text class="titleText"><text class="iconss iconfont icon-renqiniurenblue"></text>求职状态</text>
+			<text class="titleR">{{menu}}<text class="titleIco iconfont icon-gengduo10"></text></text>
+		</view>
+
+		<!-- 遮罩 -->
+
+		<mp-actionSheet bindclose="close" show-cancel='{{false}}' bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{actionSheetItems}}" title="求职状态">
+		</mp-actionSheet>
+
+	</view>
+
+
+
+	<view class="jobExpectations">
+		<view class="title" bindtap="tojobExpectations">
+			<text class="titleText"><text class="iconss iconfont icon-renqiniurenblue"></text>求职期望</text>
+			<text class="titleIco iconfont icon-tianjia2"></text>
+		</view>
+
+		<view class="expectationsContent">
+			<view class="expectationsbox" bindtap="tofilledJobExpectations" wx:for="{{listDatas.userjobExpect}}" data-id="{{item.id}}">
+				<text class="expectationsList">
+          <text class="expectationsItem1" wx:if="{{item.salaryStr==0}}">{{item.position}} 面议 {{item.district}}</text>
+          <text class="expectationsItem1"wx:else>{{item.position}} {{item.salaryStr}}K-{{item.salaryEnd}}K {{item.district}}</text>
+				<text class="titleIco1 iconfont icon-gengduo10"></text>
+				</text>
+				<!-- <text class="expectationsItem2">
+  北京 移动互联网.互联网.计算机软件
+        </text> -->
+			</view>
+		</view>
+	</view>
+	<view class="workExperience">
+		<view class="title" bindtap="toworkExperienceTitle">
+			<text class="titleText"><text class="iconss iconfont icon-renqiniurenblue"></text>工作经历</text>
+			<text class="titleIco iconfont icon-tianjia2"></text>
+		</view>
+
+		<view class="workExperienceContent" bindtap="toworkExperienceContent" wx:for="{{listDatas.userJobExperience}}" data-id1="{{item.id}}">
+			<view class="expectationsbox">
+				<text class="expectationsList">
+          <text class="expectationsItem1">{{item.companyName}}</text>
+				<text class="titleIco1 ">{{item.serviceTimeStr}}-{{item.serviceTimeEnd}}<text class="iconfont icon-gengduo10"></text></text>
+				</text>
+				<text class="expectationsItem2">
+				{{item.positionName}}
+				</text>
+			</view>
+			<view class="Strength">
+				<text>内容：{{item.content}}</text>
+			</view>
+		</view>
+	</view>
+	<!-- <view class="projectExperience">
+		<view class="title" bindtap="toprojectExperienceTitle">
+			<text class="titleText">项目经历</text>
+			<text class="titleIco iconfont icon-tianjia2"></text>
+		</view>
+		<view class="workExperienceContent" bindtap="toprojectExperienceContent" wx:for="{{listDatas.userJobProject}}">
+			<view class="expectationsbox">
+				<text class="expectationsList">
+          <text class="expectationsItem1">{{item.name}}</text>
+				<text class="titleIco1 "> {{item.projectTimeStr}}-{{item.projectTimeEnd}}<text class="iconfont icon-gengduo10"></text></text>
+				</text>
+				<text class="expectationsItem2">
+				{{item.role}}
+				</text>
+			</view>
+			<view class="Strength">
+				<text>内容：{{item.content}}</text>
+			</view>
+		</view>
+	</view> -->
+	<view class="educationExperience">
+		<view class="title" bindtap="toeducationExperienceTitle">
+			<text class="titleText"><text class="iconss iconfont icon-renqiniurenblue"></text>教育经历</text>
+			<text class="titleIco iconfont icon-tianjia2"></text>
+		</view>
+		<view class="educationExperienceContent" bindtap="toeducationExperienceContent" wx:for="{{listDatas.userJobEducation}}" data-id2="{{item.id}}">
+			<text class="expectationsList">
+          <text class="expectationsItem1">{{item.school}}</text>
+			<text class="titleIco1 "> {{item.eduTimeStr}}-{{item.eduTimeEnd}}<text class="iconfont icon-gengduo10"></text>
+			</text>
+			</text>
+			<view class="educationItems">
+				<text class="educationItem">
+				{{item.education}}
+				</text>
+				<text class="educationItem">
+				{{item.major}}
+				</text>
+
+			</view>
+
+
+		</view>
+	</view>
+	<!-- <view class="socialContact">
+		<view class="title" bindtap="tosocialContactTitle">
+			<text class="titleText">社交主页</text>
+			<text class="titleIco iconfont icon-tianjia2"></text>
+		</view>
+	</view> -->
+	<view class="button">
+		
+		<!-- <navigator open-type="exit" target="miniProgram" bindtap="quit"><button class="btn1">退出</button></navigator> -->
+		<button class="btn2" bindtap="toPersonalCenter" data-id="{{listDatas.id}}">简历阅览</button>
+	</view>
+	<!-- 规则提示 -->
+	<view class="ruleZhezhao {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+		<view class='ruleZhezhaoContent'>.
+			<view class='ruleZhezhaoText'>
+				<text class="title">登录或注册</text>
+				<!-- <button class="WeChat iconfont icon-weixin" open-type='getUserInfo' bindgetuserinfo="handleGetUserInfo" bindtap="toNewUser"> 微信账号快速登录</button> -->
+				<button class="WeChat iconfont icon-weixin" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" bindtap="toNewUser"> 微信账号快速登录</button>
+				<!-- <button class="phone iconfont icon-youpinwangtubiao-"> 手机号注册/登录</button> -->
+			</view>
+			<text class='ruleHide iconfont icon-guanbi1' bindtap='hideRule'></text>
+		</view>
+	</view>
+	<!-- end -->
+
+</view>

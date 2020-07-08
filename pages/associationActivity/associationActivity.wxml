@@ -1,0 +1,17 @@
+<!--pages/associationActivity/associationActivity.wxml-->
+<view class="associationActivity">
+<view class="associationActivityTitle">
+    <text class="titleT">在校经历</text>
+    <text class="titleB">简单描述一下你的校园成长经历吧</text>
+  </view>
+  <view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="请输入内容~" name="advantage" disable-default-padding="true" value="{{experience}}"/>
+    <view class="button" bindtap="toEducationExperienceTitle">
+    <button form-type="submit" bindtap="checkStrength"> 保存 </button>
+    
+    </view>
+  </form>
+</view>
+</view>
+

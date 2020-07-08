@@ -1,0 +1,83 @@
+<!--pages/educationExperienceContent/educationExperienceContent.wxml-->
+<view class="jobExpectations">
+	<view class="jobExpectationsTitle">
+		<text class="titleT">教育经历</text>
+		<text class="titleB">请从最高学历填写</text>
+	</view>
+	<form bindsubmit="formSubmit" catchreset="formReset">
+		<view class="content">
+			<view class="nav">
+				<text class="text">学校名称</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="school" class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请填写学校名称" value="{{school}}"/>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<view class="section">
+				<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+					<view class="picker">
+						<view class="nav">
+							<text class="text">学历水平</text>
+							<view class="page-section">
+								<view class="weui-cells weui-cells_after-title">
+									<view class="weui-cell weui-cell_input">
+										<input name="education" class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请填写学历水平" value="{{education}}" disabled="true"/>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</picker>
+			</view>
+			<view class="nav">
+				<text class="text">专业名称</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="major" class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请填写专业名称" value="{{major}}"/>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<view class="section">
+				<picker mode="multiSelector" bindchange="bindMultiPickerChange1" bindcolumnchange="bindMultiPickerColumnChange1" value="{{multiIndex1}}" range="{{multiArray1}}">
+					<view class="picker">
+						<view class="nav">
+							<text class="text">时间段</text>
+							<view class="page-section">
+								<view class="weui-cells weui-cells_after-title">
+									<view class="weui-cell weui-cell_input">
+										<input name="time" class="weui-input" maxlength="12" bindinput="bindKeyInput" placeholder="请填写学历水平" value="{{time}}" disabled="true"/>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</picker>
+			</view>
+
+			<view class="nav">
+				<text class="text">在校经历</text>
+				<view class="page-section" bindtap="toAssociationActivity">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="experience" class="weui-input" bindinput="bindKeyInput" placeholder="请填写在校经历" value="{{experience}}" disabled="true"/>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="button">
+			<button class="button1" formType="reset">删除</button>
+			<button class="button2" form-type="submit" bindtap="checkSave">确定</button>
+		</view>
+	</form>
+
+
+</view>

@@ -1,0 +1,39 @@
+{
+  "pages": [    
+    "socialSecurity/ssIncreaseStaff/ssIncreaseStaff",
+    "pages/homepage/homepage",
+    "pages/jobHunting/jobHunting",
+    "pages/detailcity/detailcity",
+    "pages/educationExperienceTitle/educationExperienceTitle",
+    "pages/onlineResume/onlineResume",
+    "pages/position_classification/positionClassification",
+    "pages/personalCenter/personalCenter",
+    "pages/newUser/newUser",
+    "pages/educationExperienceContent/educationExperienceContent",
+    "pages/projectExperienceTitle/projectExperienceTitle",
+    "pages/filledJobExpectations/filledJobExpectations",
+    "pages/workExperienceContent/workExperienceContent",
+    "pages/workExperienceTitle/workExperienceTitle",
+    "pages/jobExpectations/jobExpectations",
+    "pages/personalStrength/personalStrength",
+    "pages/screenPage/screenPage",
+    "pages/Workofhope/Workofhope",
+    "pages/detailPage/detailPage",
+    "pages/associationActivity/associationActivity",
+    "pages/UserContent/UserContent",
+    "pages/projectExperienceContent/projectExperienceContent",
+    "pages/filednewUser/filednewUser",
+    "my/personalStrength/personalStrength",
+    "my/filledJobExpectations/filledJobExpectations",
+    "my/workExperienceTitle/workExperienceTitle",
+    "my/educationExperienceTitle/educationExperienceTitle"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#d3361a",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "dark"
+  },
+  "sitemapLocation": "sitemap.json"
+}

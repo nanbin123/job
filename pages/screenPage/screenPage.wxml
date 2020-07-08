@@ -1,0 +1,39 @@
+<!--pages/screenPage/screenPage.wxml-->
+<view class="screen">
+<form catchsubmit="formSubmit" catchreset="formReset">
+	<view class="center">
+		<view class="nav">
+			<view class="title">
+				<text class="screenTitle">经验要求</text>
+			</view>
+			<view class="content">
+				<text class="item {{active==index?'active':''}}" wx:for="{{experience}}" bindtap="toexperience" data-experience="{{index}}" data-experiencedata="{{experience[index]}}">{{item}}</text>
+
+			</view>
+		</view>
+		<view class="nav">
+			<view class="title">
+				<text class="screenTitle">学历要求</text>
+			</view>
+			<view class="content">
+				<text class="item {{active1==index?'active1':''}}" wx:for="{{education}}" bindtap="toeducation" data-education="{{index}}" data-educationdata="{{education[index]}}">{{item}}</text>
+
+			</view>
+		</view>
+		<view class="nav">
+			<view class="title">
+				<text class="screenTitle">薪资待遇</text>
+			</view>
+			<view class="content">
+				<text class="item {{active2==index?'active2':''}}" wx:for="{{pay}}" bindtap="topay" data-pay="{{index}}" data-paydata="{{pay[index]}}">{{item}}</text>
+
+			</view>
+		</view>
+	</view>
+	<view class="button">
+		<button class="button1" formType="reset">清除</button>
+		<button class="button2" bindtap="toback">确定</button>
+	</view>
+</form>
+
+</view>

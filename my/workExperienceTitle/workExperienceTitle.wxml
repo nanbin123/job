@@ -1,0 +1,96 @@
+<!--pages/workExperienceTitle/workExperienceTitle.wxml-->
+<view class="workExperienceTitle">
+	<view class="workExperienceTitles">
+		<text class="titleT">工作经历</text>
+		<text class="titleB">请填写最近的一份工作经历呦</text>
+	</view>
+	<form bindsubmit="formSubmit">
+		<view class="content">
+			<view class="nav">
+				<text class="text">公司名称</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="companyName" class="weui-input"  bindinput="bindKeyInput" placeholder="请填写公司名称" />
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="nav" bindtap="toclassification">
+				<text class="text">职位类型</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input class="positionType" class="weui-input"  bindinput="bindKeyInput" placeholder="请填写职位名称" value="{{positionName}}" disabled="true"/>
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="nav">
+				<text class="text">职位名称</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="positionName" class="weui-input"  bindinput="bindKeyInput" placeholder="请填写职位名称" />
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="nav">
+				<text class="text">工作内容</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="content" class="weui-input" bindinput="bindKeyInput" placeholder="请填写工作内容" />
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="nav">
+				<text class="text">工作业绩</text>
+				<view class="page-section">
+					<view class="weui-cells weui-cells_after-title">
+						<view class="weui-cell weui-cell_input">
+							<input name="achievement" class="weui-input" bindinput="bindKeyInput" placeholder="请填写工作业绩" />
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="section">
+
+				<view class="picker">
+					<view class="nav">
+						<text class="text">在职时间</text>
+						<view class="input">
+							<picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" rangeKey="name" range="{{multiArray}}">
+								<view class="page-section">
+									<view class="weui-cells weui-cells_after-title">
+										<view class="weui-cell weui-cell_input">
+											<input name="serviceTimeStr" class="weui-input2" bindinput="bindKeyInput" placeholder="请选择开始时间" value="{{serviceTimeStr}}" disabled="true" />
+										</view>
+									</view>
+								</view>
+							</picker>
+
+							<picker mode="multiSelector" bindchange="bindMultiPickerChange1" value="{{multiIndex1}}" range="{{multiArray1}}" rangeKey="name">
+								<view class="page-section">
+									<view class="weui-cells weui-cells_after-title">
+										<view class="weui-cell weui-cell_input">
+											<input name="serviceTimeEnd" class="weui-input1" maxlength="10" bindinput="bindKeyInput" placeholder="请选择结束时间" value="{{serviceTimeEnd}}" disabled="true" />
+										</view>
+									</view>
+								</view>
+							</picker>
+						</view>
+					</view>
+				</view>
+
+			</view>
+		</view>
+		<view class="button">
+			<button class="button2" formType="submit" bindtap="checkSave">{{buttonSubmit}}</button>
+		</view>
+
+	</form>
+
+</view>

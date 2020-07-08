@@ -1,0 +1,106 @@
+<!--pages/UserContent/UserContent.wxml-->
+<view class="newUser">
+  <view class="newUserTitle">
+    <text class="titleT">填写基本信息</text>
+    <text class="titleB">介绍一下自己吧</text>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="newUserContent">
+      <view class="headPortrait">
+        <view>
+          <text class="headtext">头像</text>
+          <text class="headtext1">上传求职照片被回复的几率会翻倍</text>
+        </view>
+        <text class="icn iconfont icon-shangchuantouxiang1"></text>
+      </view>
+      <view class="section">
+            <view class="gender">
+        <text class="gendertext">性别</text>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <radio class="radio" color="#38c1b9" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+            <text class="gendertext1">{{item.value}}</text>
+          </radio>
+        </radio-group>
+      </view>
+      </view>
+
+      <!-- <view class="JobStatus">
+        <view class="headPortrait">
+          <view>
+            <text class="headtext">求职身份</text>
+            <text class="headtext1">有正式工作经历</text>
+          </view>
+          <radio-group class="radio-group" bindchange="radioChange1">
+            <radio class="radio" color="#38c1b9" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+              <text class="gendertext1">{{item.value}}</text>
+            </radio>
+          </radio-group>
+        </view>
+      </view> -->
+     <view class="section">
+      <view class="name">
+        <text class="text">姓名</text>
+        <view class="page-section">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <input name="userName" class="weui-input" maxlength="4" bindinput="bindKeyInput"  placeholder="请输入姓名" value="{{listArr.userName}}"/>
+            </view>
+          </view>
+        </view>
+      </view>
+     </view>
+  <view class="section">
+     <view class="birth" catchtap='showModalBtn1'>
+        <text class="text">出生年月日</text>
+        <view class="page-section">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <input name="birthDate" class="weui-input" maxlength="10" bindinput="bindKeyInput"  placeholder="请选择出生年月"  value="{{year}}-{{month}}"/>
+            </view>
+          </view>
+        </view>
+      </view>
+   </view>
+     <view class="section">
+      <view class="yearsOfWorking" catchtap='showModalBtn'>
+        <text class="text">参加工作时间</text>
+        <view class="page-section">
+          <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+              <input name="workDate" class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请选择参加工作时"  value="{{year1}}-{{month1}}"/>
+            </view>
+          </view>
+        </view>
+      </view>
+     </view>
+    </view>
+    <view class="button">
+      <button form-type="submit" bindtap="checkLogin">保存</button>
+    </view>
+  </form>
+
+
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" hidden="{{showModaltest}}"></view>
+  <view class="modal-dialog" hidden="{{showModaltest}}">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+    <picker-view-column>
+      <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+    </picker-view-column>
+  </picker-view>
+  </view>
+
+    <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" hidden="{{showModal}}"></view>
+  <view class="modal-dialog" hidden="{{showModal}}">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange1">
+    <picker-view-column>
+      <view wx:for="{{years1}}" style="line-height: 50px">{{item}}年</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months1}}" style="line-height: 50px">{{item}}月</view>
+    </picker-view-column>
+  </picker-view>
+  </view>
+</view>

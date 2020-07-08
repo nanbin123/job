@@ -1,0 +1,91 @@
+/* pages/Workofhope/Workofhope.wxss */
+page{
+  width: 100%;
+}
+.Workofhope{
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.WorkofhopeTitles {
+  width: 100%;
+  height: 200rpx;
+}
+.titleT{
+  width: 100%;
+  display: block;
+  font-size: 54rpx;
+  font-weight: bold;
+  padding: 16rpx 0
+}
+.titleB{
+  font-size: 30rpx;
+  color: #5d5d5d
+}
+.nav{
+  width: 100%;
+  border-bottom: 4rpx solid #eeeeee;
+  padding-bottom: 30rpx;
+}
+.text{
+  display: block;
+  font-size: 34rpx;
+  margin: 40rpx 0 20rpx;
+}
+.text1{
+  display: block;
+  font-size: 30rpx;
+  margin: 20rpx 0 20rpx;
+}
+.box{
+  height: 200rpx;
+  width: 100%;
+  border: 4rpx solid #ad3434;
+  text-align: center;
+  border-radius: 10rpx;
+}
+.item{
+display: inline-block;
+margin-right: 10rpx;
+font-size: 36rpx;
+color: #ad3434;
+font-weight: bold;
+height: 100%;
+line-height: 200rpx;
+}
+.jobStatus {
+  width: 100%;
+  border-bottom: 4rpx solid #f2f2f2;
+}
+.title {
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titleR {
+  color: #ababab;
+  font-size: 30rpx;
+}
+.titleText {
+  font-size: 38rpx;
+  font-weight: bold;
+}
+
+.Strength {
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  color: #6d6d6d;
+  width: 100%;
+}
+.weui-actionsheet__title-text{
+  color: #ad3434;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.weui-actionsheet__action{
+  color:  #ad3434;
+  font-weight: bold;
+}

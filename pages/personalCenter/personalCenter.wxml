@@ -1,0 +1,87 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class=" personalData">
+	<view class="nameData">
+		<view class="personalcontent">
+			<text class="name">{{listData.userName}}</text>
+      <text class="jianli">欢迎来到您的简历中心</text>
+		</view>
+		<image class="userAvatar" src="../../image/tab/timg.jpg"></image>
+
+	</view>
+	<view class="state">
+		<view class="stateTitle">
+     <text class="icon iconfont icon-dian1"></text>
+
+			<text class="stateTitleL">{{listData.jobStatus}}</text>
+			<!-- <text class="stateTitleR">{{listData.userName}}刚刚活跃</text> -->
+		</view>
+		<view class="stateYears">
+			<text class="iconfont icon-gongwenbao"><text class="item ">{{listData.workingLife}}年</text></text>
+			<text class="iconfont icon-xuejiyidongguanli"><text class="item">{{listData.education}}</text></text>
+			<text class="iconfont icon-dangao"><text class="item">{{listData.age}}岁</text></text>
+		</view>
+		<view class="stateNav">
+			<text>个人优势：{{listData.advantage}}</text>
+		</view>
+	</view>
+	<view class="Resume">
+		<view class="title">
+     <text class="icon1 iconfont icon-dian1"></text>
+			<text class="titleText">求职期望</text>
+		</view>
+
+		<view class="expectationsContent">
+			<view class="expectationsbox" wx:for="{{listData.userjobExpect}}">
+				<text class="expectationsList">
+          <text class="expectationsItem1">{{listData.address}} {{item.district}}</text>
+				<text class="money">{{item.salaryStr}}K-{{item.salaryEnd}}K</text>
+				</text>
+				<text class="expectationsItem2">
+ {{item.position}} {{item.category==0?"全职":"兼职"}}
+        </text>
+			</view>
+		</view>
+	</view>
+	<view class="workExperience">
+		<view class="title">
+     <text class="icon2 iconfont icon-dian1"></text>
+
+			<text class="titleText">工作经历</text>
+		</view>
+
+		<view class="workExperienceContent" wx:for="{{listData.userJobExperience}}">
+			<view class="expectationsbox">
+				<text class="expectationsList">
+          <text class="expectationsItem1">{{item.companyName}}</text>
+				<text class="titleIco1 ">{{item.serviceTimeEnd}}-{{item.serviceTimeStr}}</text>
+				</text>
+				<text class="expectationsItem2">
+        {{item.positionName}}
+        </text>
+			</view>
+			<view class="Strength">
+				<text>内容：{{item.content}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="educationExperience">
+		<view class="title" bindtap="toeducationExperienceTitle">
+     <text class="icon3 iconfont icon-dian1"></text>
+
+			<text class="titleText">教育经历</text>
+		</view>
+		<view class="educationExperienceBox" wx:for="{{listData.userJobEducation}}">
+			<text class="expectationsList">
+          <text class="expectationsItem1">{{item.school}}</text>
+			<text class="titleIco1 ">{{item.eduTimeStr}}-{{item.eduTimeEnd}}</text>
+			</text>
+			<text class="expectationsItem2">
+			{{item.major}}
+			</text>
+		</view>
+
+	</view>
+	<!-- <view class="button">
+    <button bindtap="tochatRoom">立即沟通</button>
+  </view> -->
+</view>

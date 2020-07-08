@@ -1,0 +1,19 @@
+
+<view class="expect-wrap">
+  <view class="search_box">
+      <input type="text" bindinput="searchInput" class="search_print" placeholder="搜索职位/公司" />
+      <view class="serach_btn" bindtap="searchBtn">
+        搜索
+      </view>
+    </view>    
+</view>
+
+
+<view class="filter-wrap">
+    <view class="btn-list">
+        <view catchtap="onHandleSkipInfo" class="list-item {{sortType==1?'active':''}}">推荐</view>
+    </view>
+    <view class="tag-list">
+        <navigator class="list-item {{conditionCount?'active':''}}" hoverClass="none">筛选</navigator>
+    </view>
+</view>

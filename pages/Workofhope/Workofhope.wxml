@@ -1,0 +1,33 @@
+<!--pages/Workofhope/Workofhope.wxml-->
+<view class="Workofhope">
+	<view class="WorkofhopeTitles">
+		<text class="titleT">工作想找什么工作？</text>
+		<text class="titleB">添加多个求职期望，可获得准确的高薪工作机会</text>
+	</view>
+	<view class="WorkofhopeConter">
+		<view class="nav">
+  <view wx:for="{{position}}">
+				<text class="text">{{item.position}}</text>
+			<text class="text1">{{item.salaryStr}}K-{{item.salaryEnd}}K</text>
+	</view>
+
+		</view>
+	</view>
+	<view class="box" bindtap="toJobExpectations">
+		<text class="item iconfont icon-tianjia2"></text>
+		<text class="item">继续添加求职期望</text>
+	</view>
+	<view class="jobStatus">
+		<view class="title" bindtap="btnClick" data-flag='{{true}}'>
+			<text class="titleText">求职状态</text>
+			<text class="titleR">{{menu}}<text class="titleIco iconfont icon-gengduo10"></text></text>
+		</view>
+
+		<!-- 遮罩 -->
+
+		<mp-actionSheet bindclose="close" show-cancel='{{false}}' bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{actionSheetItems}}" title="求职状态">
+		</mp-actionSheet>
+
+	</view>
+
+</view>

@@ -1,0 +1,46 @@
+<!--pages/detailPage/detailPage.wxml-->
+<!--职位详情页 -->
+<view class="detailPageContainer">
+  <view class="Header">
+    <view class="JobcontentTitle">
+      <text class="jobTitle">{{listData.positionName}}</text>
+      <text class="salary">{{listData.salary}}</text>
+    </view>
+    <view class="GeneralQualifications">
+      <text class="demand iconfont icon-fujin1 "> {{listData.address}}</text>
+      <text class="demand  iconfont icon-icon-test2">  {{listData.experience}}</text>
+      <text class="demand iconfont icon-xuejiyidongguanli "> {{listData.education}}</text>
+    </view>
+  </view>
+  <view class="nav">
+    <text class="navTitle">职位详情</text>
+    <view class="wares-lists" style="max-height:{{showAllWares?listBoxHeight:'300rpx'}};">
+      <view id="list-box">
+       	<view class="list">
+					<text class="more" bind:tap="ready" wx:if="{{isShow? false:true}}">查看更多</text>
+					<text class="navContent">
+					 {{positionDescribe}}
+					</text>
+				</view>
+       
+      </view>
+    </view>
+
+  </view>
+  <view class="corporateInformation">
+    <text class="corporateInformationTitle">公司信息</text>
+    <view class="corporateContent">
+      <image class=" companyPortrait" src="../../image/tab/gongsi.png"></image>
+      <text class=" companyName">{{listData.compayName}}</text>
+      <text class="intro">{{listData.scale}}</text>
+    </view>
+  </view>
+
+  <view class="workAddress">
+    <text class="workAddressTitle">工作地址</text>
+    <text class="workAddressContent">{{listData.address}}</text>
+  </view>
+  <view class="footer">
+    <button class="button2" bindtap="tochatRoom" disabled="{{btnIsShow}}">{{btnIsShow? '投递完成':'立即投递'}}</button>
+  </view>
+</view>

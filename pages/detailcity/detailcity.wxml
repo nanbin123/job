@@ -1,0 +1,21 @@
+<!--pages/detailcity/detailcity.wxml-->
+<view class="screen">
+<form catchreset="formReset">
+	<view class="center">
+		<view class="nav">
+			<view class="title">
+				<text class="screenTitle">北京市</text>
+			</view>
+			<view class="content">
+				<text class="item {{active==index?'active':''}}" wx:for="{{cityData}}" bindtap="toexperience" data-experience="{{index}}" data-adcode="{{item.adcode}}" data-citycode="{{item.citycode}}" data-name="{{item.name}}">{{item.name}}</text>
+
+			</view>
+		</view>
+	</view>
+	<view class="button">
+		<button class="button1" formType="reset">清除</button>
+		<button class="button2" bindtap="toback">确定</button>
+	</view>
+</form>
+
+</view>

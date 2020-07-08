@@ -1,0 +1,304 @@
+/* pages/onlineResume/onlineResume.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.onlineResume {
+  width: 100%;
+  height: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.personalInformation {
+  width: 100%;
+  height: 220rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4rpx solid #f2f2f2;
+}
+
+.personalcontent {
+  width: 400rpx;
+}
+
+.name {
+  display: block;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.year {
+  display: inline-block;
+  margin-top: 30rpx;
+  color: #a8a8a8;
+  font-size: 32rpx;
+  font-family: cursive;
+  width: 400rpx;
+}
+
+.userAvatar {
+  width: 150rpx;
+  height: 150rpx;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.personalStrength {
+  width: 100%;
+  border-bottom: 4rpx solid #f2f2f2;
+}
+
+.title {
+  width: 100%;
+  height: 110rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleText {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.Strength {
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  color: #6d6d6d;
+  width: 100%;
+  margin-bottom: 30rpx;
+  /* padding-left: 40rpx;
+  box-sizing: border-box; */
+  
+}
+.jobStatus {
+  width: 100%;
+  border-bottom: 4rpx solid #f2f2f2;
+}
+
+.titleR {
+  color: #ababab;
+  font-size: 30rpx;
+}
+
+.jobExpectations {
+  width: 100%;
+  /* padding-bottom: 30rpx; */
+  border-bottom: 4rpx solid #f2f2f2;
+}
+
+.expectationsContent {
+  width: 100%;
+}
+
+.expectationsbox {
+  width: 100%;
+  margin-bottom: 30rpx;
+  /* padding-left: 40rpx;
+  box-sizing: border-box; */
+
+}
+
+.expectationsList {
+  width: 100%;
+}
+
+.expectationsItem1 {
+  font-weight: bold;
+  font-size: 32rpx;
+
+}
+
+.expectationsItem2 {
+  color: #ababab;
+  font-size: 30rpx;
+  display: block;
+  line-height: 20rpx;
+}
+
+.titleIco1 {
+  /* display: inline-block; */
+  float: right;
+    color: #ababab;
+  font-size: 30rpx;
+}
+.titleIco{
+  color: #d3361a;
+  font-size: 44rpx;
+
+}
+.titleIco2{
+  color: #d3361a;
+  font-size: 36rpx;
+  display: inline-block;
+  margin-left: 10rpx;
+}
+.workExperience{
+  width: 100%;
+  /* padding-bottom: 30rpx; */
+  border-bottom: 4rpx solid #f2f2f2;
+}
+.projectExperience{
+  width: 100%;
+  /* padding-bottom: 30rpx; */
+  border-bottom: 4rpx solid #f2f2f2;
+}
+.workExperienceContent{
+  margin-bottom: 30rpx;
+}
+
+.educationExperience{
+  width: 100%;
+  /* padding-bottom: 30rpx; */
+  border-bottom: 4rpx solid #f2f2f2;
+}
+.socialContact{
+  width: 100%;
+  /* padding-bottom: 20rpx; */
+  border-bottom: 4rpx solid #f2f2f2;
+}
+.button{
+    width: 100%;
+  height: 80rpx;
+  padding-bottom: 30rpx;
+  display: flex;
+  margin-top: 50rpx;
+}
+
+.btn1{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  background: #f8f8f8;
+  color: hsl(9, 82%, 51%)
+}
+.btn2{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  background: #d3361a;
+  color: #fff
+}
+.weui-actionsheet__title-text{
+  color: rgb(129, 98, 40);
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.weui-actionsheet__action{
+  color: rgb(88, 74, 48);
+  font-weight: bold;
+}
+.weui-actionsheet__cell{
+  font-size: 0rpx;
+
+}
+.educationExperienceContent{
+  margin-bottom: 30rpx;
+}
+.educationItems{
+  display: flex;
+}
+.educationItem{
+  color: #ababab;
+  font-size: 30rpx;
+  display: block;
+  line-height: 20rpx;
+  margin-right: 30rpx;
+}
+/* 规则提示层 */
+.isRuleShow{
+  display: block;
+}
+.isRuleHide{
+  display: none;
+}
+.ruleZhezhao{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color:rgba(0, 0, 0, .5);
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.ruleZhezhaoContent{
+  padding: 20rpx 0;
+  width: 80%;
+  background: #e1d2b1;
+  margin: 40% auto;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.ruleZhezhaoText{
+  width: 80%;
+  margin: 25rpx 0 25rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.ruleZhezhaoText .title{
+  color: #000;
+  font-size: 50rpx;
+  height: 60rpx;
+  width: 100%;
+  display: block;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  margin-right: 10rpx;
+  margin-bottom: 30rpx;
+  font-weight: bold;
+}
+.ruleZhezhaoText .WeChat{
+  width: 100%;
+  margin-bottom: 10rpx;
+  background: #d3361a;
+  color: #fff;
+}
+.ruleZhezhaoText .phone{
+  width: 100%;
+  border: #d3361a;
+}
+.ruleHide{
+  position: absolute;
+  top: 0rpx;
+  right: 0;
+  font-size: 44rpx;
+}
+.rule{
+  display: block;
+  border: 1px solid #fff;
+  width: 100rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff;
+  height: 60rpx;
+  font-size: 30rpx;
+  border-radius: 30rpx;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+.iconss{
+  color: #d3361a;
+}
+/* end */
+navigator{
+  width: 30%;
+}

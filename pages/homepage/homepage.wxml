@@ -1,0 +1,44 @@
+<view class="homePage">
+ <view class="header">
+		<view class="personalHeard" >    
+           <button class="btnGetPhone" open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber" bindtap="toNewUser" >
+            <view class="headPortraits">
+              <image class="userAvatar" src="{{userInfo.avatarUrl? userInfo.avatarUrl : '/image/tab/logo.png'}}"></image>
+            </view>
+            <view class="HeardTop_L">
+              <view class="item1">{{userInfo.userName? userInfo.userName:'未登录/注册'}}</view>
+              <view class="item2">{{title?title:'点击头像可登陆/注册'}}</view>
+            </view>
+            </button>
+		</view>
+	</view>
+	<view class="content">
+   <view class="nav" bindtap="toJobHunting">
+     <text class="items1 iconfont icon-gongwenbaohdpi"></text>
+     <view class="items">
+     <text class="items2">找工作</text>
+     <text class="items3">一键投递，快速找工作</text>
+     
+     </view>
+     <text class="items4 iconfont icon-gengduo10"></text>
+   </view>
+   <view class="nav" bindtap="toOnlineResume">
+     <text class="items11 iconfont icon-zaixianjianli1"></text>
+     <view class="items">
+     <text class="items2">我的简历</text>
+     <text class="items3">丰富简历，获得更多机会</text>
+     
+     </view>
+     <text class="items4 iconfont icon-gengduo10"></text>
+   </view>
+   <view class="nav" bindtap="toOther">
+     <text class="items111 iconfont icon-shangchuan2"></text>
+     <view class="items">
+     <text class="items2">其他待开放功能</text>
+     <text class="items3">还有更多功能，待您以后使用</text>
+     
+     </view>
+     <text class="items4 iconfont icon-gengduo10"></text>
+   </view>
+  </view>
+</view>
