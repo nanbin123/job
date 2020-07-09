@@ -1,6 +1,5 @@
 {
-  "pages": [    
-    "socialSecurity/ssIncreaseStaff/ssIncreaseStaff",
+  "pages": [
     "pages/homepage/homepage",
     "pages/jobHunting/jobHunting",
     "pages/detailcity/detailcity",
@@ -26,7 +25,8 @@
     "my/personalStrength/personalStrength",
     "my/filledJobExpectations/filledJobExpectations",
     "my/workExperienceTitle/workExperienceTitle",
-    "my/educationExperienceTitle/educationExperienceTitle"
+    "my/educationExperienceTitle/educationExperienceTitle",
+     "socialSecurity/ssIncreaseStaff/ssIncreaseStaff"
   ],
   "window": {
     "navigationBarBackgroundColor": "#d3361a",
