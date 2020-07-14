@@ -20,12 +20,15 @@ Page({
     active1: 0,
     active2: 0,
     positionName:'',
-
     hosList:[],//页面显示的数据
     isShow:false
     
   },
-
+  none:function(){
+    this.setData({
+      display: "none"      
+    })   
+  },
 
   input1:function(e){//输入时 实时调用搜索方法
     this.search(e.detail.value)
@@ -33,10 +36,8 @@ Page({
     confirm1:function(e){//软键盘 搜索按钮 调用 （此方法可不用）
     this.search(e.detail.value)
     },
-    search:function(key){//搜索方法 key 用户输入的查询字段
-    console.log(key)
-    var This = this;
-    
+    search:function(key){//搜索方法 key 用户输入的查询字段 
+    var This = this;    
     var hosList = wx.getStorage({
       key: 'hosList',
       success: function(res) {//从storage中取出存储的数据
@@ -126,7 +127,6 @@ Page({
       positionId: e.currentTarget.dataset.id,
       positionName: e.currentTarget.dataset.name
     })
-
     this.setData({
       display: "none",
       name: e.currentTarget.dataset.name,
@@ -137,18 +137,20 @@ Page({
       });
     wx.navigateBack({ delta: 1 })
   },
+  //搜索
   tohosList:function(e){
-    var name = e.currentTarget.dataset.name
-    var id = e.currentTarget.dataset.id
-    wx.setStorageSync('name', name)
-    wx.setStorageSync('id', id)
+    var pages = getCurrentPages()
+    var prevPage = pages[pages.length - 2]
+    //向上一个页面中的data 中赋值
+    prevPage.setData({
+      positionId: e.currentTarget.dataset.id,
+      positionName: e.currentTarget.dataset.name
+    })
     this.setData({
-      name: name,
+      name: e.currentTarget.dataset.name,
       isShow:false,
     })
-    wx.navigateBack({
-      
-    })
+    wx.navigateBack({ delta: 1 })
   },
 
 
@@ -157,24 +159,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-   
     var hosLists = listDatas.list_data
-    // console.log(hosLists,'---')
     var arr=[]
     var arr1=[]
-
    for(var i =0;i<hosLists.length;i++){
      for(var j = 0;j<hosLists[i].list.length;j++){
       arr.push(hosLists[i].list[j])
      }
    }
-  //  console.log(arr)
    for(var i =0;i<arr.length;i++){
      for(var j=0;j<arr[i].list.length;j++){
       arr1.push(arr[i].list[j])
      }
    }
-   console.log(arr1)
    this.setData({
     listDatas: listDatas.list_data,
     // hosList:arr1

@@ -25,18 +25,18 @@
 			<text>{{advantage}}</text>
 		</view>
 	</view>
-	<view class="jobStatus">
-		<view class="title" bindtap="btnClick" data-flag='{{true}}'>
-			<text class="titleText"><text class="iconss iconfont icon-renqiniurenblue"></text>求职状态</text>
-			<text class="titleR">{{menu}}<text class="titleIco iconfont icon-gengduo10"></text></text>
-		</view>
+  <view class="jobStatus">
+      <view class="title" bindtap="btnClick" data-flag='{{true}}'>
+        <text class="titleText"><text class="iconss iconfont icon-renqiniurenblue"></text>求职状态</text>
+        <text class="titleR">{{menu}}<text class="titleIco iconfont icon-gengduo10"></text></text>
+      </view>
 
-		<!-- 遮罩 -->
+      <!-- 遮罩 -->
 
-		<mp-actionSheet bindclose="close" show-cancel='{{false}}' bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{actionSheetItems}}" title="求职状态">
-		</mp-actionSheet>
+      <mp-actionSheet bindclose="close" show-cancel='{{false}}' bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{actionSheetItems}}" title="求职状态">
+      </mp-actionSheet>
 
-	</view>
+    </view>
 
 
 
@@ -80,26 +80,6 @@
 			</view>
 		</view>
 	</view>
-	<!-- <view class="projectExperience">
-		<view class="title" bindtap="toprojectExperienceTitle">
-			<text class="titleText">项目经历</text>
-			<text class="titleIco iconfont icon-tianjia2"></text>
-		</view>
-		<view class="workExperienceContent" bindtap="toprojectExperienceContent" wx:for="{{listDatas.userJobProject}}">
-			<view class="expectationsbox">
-				<text class="expectationsList">
-          <text class="expectationsItem1">{{item.name}}</text>
-				<text class="titleIco1 "> {{item.projectTimeStr}}-{{item.projectTimeEnd}}<text class="iconfont icon-gengduo10"></text></text>
-				</text>
-				<text class="expectationsItem2">
-				{{item.role}}
-				</text>
-			</view>
-			<view class="Strength">
-				<text>内容：{{item.content}}</text>
-			</view>
-		</view>
-	</view> -->
 	<view class="educationExperience">
 		<view class="title" bindtap="toeducationExperienceTitle">
 			<text class="titleText"><text class="iconss iconfont icon-renqiniurenblue"></text>教育经历</text>

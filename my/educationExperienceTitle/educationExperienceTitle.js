@@ -57,7 +57,6 @@ Page({
     eduTimeStr: '',//时间段（开始时间）
     eduTimeEnd: '',//时间段（结束时间）
     experience: '',//在校经历
-    advantage: '',//在校经历
     subscript: '',//学历水平
     time: "",
     fullTime: ''
@@ -222,9 +221,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var advantage = wx.getStorageSync('advantage');
-    console.log(advantage);
-    this.setData({ advantage: advantage })
+
   },
 
   /**

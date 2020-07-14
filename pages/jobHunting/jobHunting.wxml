@@ -1,33 +1,29 @@
 <!--pages/jobHunting/jobHunting.wxml-->
 <view class="jobHunting">
 <!--头部搜索-->
-<view class="expect-wrap">
-  <view class="search_box">
-      <input type="text" bindinput="searchInput" class="search_print" placeholder="输入职位搜索" confirm-type="search" bindconfirm="searchBtn"/>
-      <view class="serach_btn" bindtap="searchBtn" >
-        搜索
+<view class="search">
+  <view class="expect-wrap">
+    <view class="search_box">
+        <input type="text" bindinput="searchInput" class="search_print" placeholder="输入职位搜索" confirm-type="search" bindconfirm="searchBtn"/>
+        <view class="serach_btn" bindtap="searchBtn" >
+          搜索
+        </view>
+      </view>    
+  </view>
+
+  <view class="filter-wrap">
+      <view class="btn-list">
+          <view bindtap="onRecSortTap" class="list-item">推荐</view>
       </view>
-    </view>    
+      <view class="tag-list">
+          <navigator class="list-item" hoverClass="none" bindtap="shaixuan">筛选
+          <block wx:if="{{num}}">·{{num}}</block>
+          </navigator>
+      </view>
+  </view>
 </view>
-
-<view class="filter-wrap">
-    <view class="btn-list">
-        <view bindtap="onRecSortTap" class="list-item">推荐</view>
-    </view>
-    <view class="tag-list">
-        <navigator class="list-item" hoverClass="none" bindtap="shaixuan">筛选
-        <block wx:if="{{num}}">·{{num}}</block>
-        </navigator>
-    </view>
-</view>
-	<!-- 头部搜索上一版本<view class="recruitBtn">
-		 <view class="recruitBtnR">
-			<text class="item6" bindtap="shaixuan">筛选·{{num}}</text>
-
-		</view> 
-	</view>-->
-  <scroll-view scroll="y">
-		<view class="Jobcontent" bindtap="todetailPage" wx:for="{{moment}}" wx:key="listdata" id="{{item.id}}">
+  <scroll-view scroll="y" class="JobcontentScroll">
+	<view class="Jobcontent" bindtap="todetailPage" wx:for="{{moment}}" wx:key="listdata" id="{{item.id}}">
 		<view class="positionDetails">
 			<view class="JobcontentTitle">
 				<text class="jobTitle">{{item.positionName}}</text>

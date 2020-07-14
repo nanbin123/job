@@ -1,11 +1,10 @@
 {
-  "pages": [
+  "pages": [    
     "pages/homepage/homepage",
     "pages/jobHunting/jobHunting",
     "pages/detailcity/detailcity",
     "pages/educationExperienceTitle/educationExperienceTitle",
     "pages/onlineResume/onlineResume",
-    "pages/position_classification/positionClassification",
     "pages/personalCenter/personalCenter",
     "pages/newUser/newUser",
     "pages/educationExperienceContent/educationExperienceContent",
@@ -22,6 +21,7 @@
     "pages/UserContent/UserContent",
     "pages/projectExperienceContent/projectExperienceContent",
     "pages/filednewUser/filednewUser",
+    "pages/position_classification/positionClassification",
     "my/personalStrength/personalStrength",
     "my/filledJobExpectations/filledJobExpectations",
     "my/workExperienceTitle/workExperienceTitle",

@@ -65,7 +65,7 @@
 				<view class="page-section" bindtap="toAssociationActivity">
 					<view class="weui-cells weui-cells_after-title">
 						<view class="weui-cell weui-cell_input">
-							<input name="experience" class="weui-input" placeholder="请填写在校经历" value="{{experience}}" />
+							<input disabled="disabled" name="experience" class="weui-input" placeholder="请填写在校经历" value="{{experience}}" />
 						</view>
 					</view>
 				</view>

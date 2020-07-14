@@ -1,8 +1,15 @@
 /* pages/jobHunting/jobHunting.wxss */
 /* 职位内容介绍样式 */
-/*头部搜索str */
-.expect-wrap {
-    position: relative;    
+/*头部搜索str   //    */
+.search{
+  position:fixed;
+  top: 0;
+  left: 0; 
+  z-index: 999999;
+}  
+.expect-wrap { 
+    position: relative;
+    top:0;
     height: 96rpx;
     background-color: #d3361a;
 }
@@ -111,8 +118,11 @@
 }
 
 
-/* 头部搜索end */
-
+/* 头部搜索end   //margin-top: 194rpx;*/
+.JobcontentScroll{
+  position: absolute;
+  top: 194rpx;
+} 
 .Jobcontent{
   width: 100%;
   height: 360rpx;

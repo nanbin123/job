@@ -1,5 +1,5 @@
 // pages/Workofhope/Workofhope.js
-let listDatas = require('../../datas/betweenJobs .js');
+let listDatas = require('../../datas/betweenJobs.js');
 var url = require("../../utils/request.js")
 
 Page({

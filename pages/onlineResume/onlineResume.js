@@ -1,5 +1,5 @@
 // pages/onlineResume/onlineResume.js
-let listDatas = require('../../datas/betweenJobs .js');
+let listDatas = require('../../datas/betweenJobs.js');
 var url = require("../../utils/request.js")
 console.log(listDatas,11)
 Page({
@@ -18,17 +18,6 @@ Page({
     loginData:''
   },
 
-  // quit(){
-  //   wx.getSystemInfo({
-  //               success: function(res) {
-  //                 if(res.SDKVersion>="2.1.0"){
-  //                   self.setData({
-  //                     exitApp:true//data中的初始化变量
-  //                   })
-  //                 }
-  //               }
-  //             })
-  // },
   
   //打开登录提示
   showRule: function() {
@@ -60,37 +49,25 @@ Page({
   },
 
   getPhoneNumber(e) {
-    console.log(e.detail.errMsg)
-    console.log(e.detail.iv)
-    console.log(e.detail.encryptedData)
     var ency = e.detail.encryptedData;
-    var urls = url.default
-
     var iv = e.detail.iv;
-    var token = wx.getStorageSync('token')
-    console.log('=========手機號token=========', JSON.stringify(token));
-
     if (e.detail.errMsg == 'getPhoneNumber:fail user deny') {
-
       this.setData({
-
         modalstatus: true,
         isRuleTrue: false
       });
-
     }
      else {//同意授权
-
       wx.request({
         method: "POST",
-        url: urls + 'user/deciphering',
+        url: url.default + 'user/deciphering',
         data: {
           encrypdata: ency,
           ivdata: iv,
         },
 
         header: {
-          "token": token,
+          "token": wx.getStorageSync('token'),
           "Content-Type": "application/x-www-form-urlencoded",
         },
 
@@ -202,30 +179,20 @@ Page({
 
 
   close() {
-    console.log("close")
     this.setData({
       showActionsheet: !this.data.showActionsheet
     })
-   
   },
   btnClick(e) {
     var flag = e.currentTarget.dataset.flag
     let index = e.detail.index
-    var urls = url.default
-
-    var token = wx.getStorageSync('token')
-    console.log(token, 1111)
-  
     if (!flag){
      this.setData({
        menu: this.data.actionSheetItems[index].text,
        jobStatus: this.data.actionSheetItems[index].value
      })
-     console.log('用户点击了')
-
-      
       wx.request({
-        url: urls+"user/updateUserJob",
+        url: url.default+"user/updateUserJob",
         method: 'POST',
         data: {
           menu: this.data.actionSheetItems[index].text,
@@ -233,20 +200,12 @@ Page({
         },
         header: {
           "Content-Type": "application/x-www-form-urlencoded",
-          'token': token
+          'token': wx.getStorageSync('token')
         },
         success(res) {
           console.log(res)
-          // if (res.data.code = 200) {
-          //   // wx.showToast({
-          //   //   title: '成功',
-          //   //   icon: 'success',
-          //   //   duration: 2000
-          //   // })
-          // }
         }
       });
-      console.log(this.data.value, 111)
    }
     this.close()
   },
@@ -255,26 +214,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
     var loginData = wx.getStorageSync('loginData')
     //更新状态数据
     this.setData({
       actionSheetItems: listDatas.betweenJob_list.data,
       loginData:loginData
-
     })
-    var token = wx.getStorageSync('token')
-    console.log(token,'////')
-    var urls = url.default
     var that = this
-    console.log(token, 155555)
-
-    console.log('token有效')
     wx.request({
-      url: urls+'user/selectUserJob',
+      url: url.default+'user/selectUserJob',
       method: "POST",
       header: {
-        "token": token,
+        "token": wx.getStorageSync('token'),
         "Content-Type": "application/x-www-form-urlencoded",
 
       },
@@ -467,9 +418,6 @@ Page({
   onShow: function () {
     wx.removeStorageSync('city')
     wx.removeStorageSync('name')
-
-
-
     var loginData = wx.getStorageSync('loginData')
     this.setData({
       loginData:loginData
