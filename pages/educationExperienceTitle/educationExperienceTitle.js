@@ -83,9 +83,11 @@ Page({
    */
   preventTouchMove: function () {
   },
+  educationBindtap: function(e){
+    wx.hideKeyboard()
+  },
   bindMultiPickerChange: function (e) {
     var v = e.detail.value
-
     this.setData({
       education:this.data.multiArray[0][v[0]]+'-'+this.data.multiArray[1][v[1]]
     })

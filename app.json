@@ -1,6 +1,7 @@
 {
-  "pages": [    
+  "pages": [ 
     "pages/homepage/homepage",
+    "pages/test/test",
     "pages/jobHunting/jobHunting",
     "pages/detailcity/detailcity",
     "pages/educationExperienceTitle/educationExperienceTitle",
@@ -12,6 +13,8 @@
     "pages/filledJobExpectations/filledJobExpectations",
     "pages/workExperienceContent/workExperienceContent",
     "pages/workExperienceTitle/workExperienceTitle",
+    "pages/workContent/workContent",
+    "pages/workAchievement/workAchievement",
     "pages/jobExpectations/jobExpectations",
     "pages/personalStrength/personalStrength",
     "pages/screenPage/screenPage",
@@ -27,6 +30,7 @@
     "my/workExperienceTitle/workExperienceTitle",
     "my/educationExperienceTitle/educationExperienceTitle",
      "socialSecurity/ssIncreaseStaff/ssIncreaseStaff"
+ 
   ],
   "window": {
     "navigationBarBackgroundColor": "#d3361a",

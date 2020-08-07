@@ -79,6 +79,13 @@ page{
  background: rgba(255, 255, 255, 1); 
  border-radius: 5rpx; 
 }
+
+.ellipsis{
+  font-size: 34rpx;
+  width: 90%;  /*必须设置宽度*/    
+  text-overflow: ellipsis; /*以省略号...显示*/
+
+}
 .weui-input{
   font-size: 34rpx;
 }

@@ -2,8 +2,8 @@
  var url = require("../../utils/request.js")
 
 let listDatas = require('../../datas/List.js');
-// let hosList = require('../../datas/postList.js');
-console.log(listDatas.list_data)
+
+
 
 Page({
 

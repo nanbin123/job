@@ -10,21 +10,22 @@
 				<view class="page-section">
 					<view class="weui-cells weui-cells_after-title">
 						<view class="weui-cell weui-cell_input">
-							<input name="school" class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请填写学校名称" />
+							<input name="school" class="weui-input" bindinput="bindKeyInput" placeholder="请填写学校名称"/>
 						</view>
 					</view>
 				</view>
 			</view>
 
-			<view class="section">
-				<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+		  <view class="section">
+				<picker mode="multiSelector"  bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
 					<view class="picker">
-						<view class="nav">
+						<view class="nav" bindtap="educationBindtap">
 							<text class="text">学历水平</text>
 							<view class="page-section">
 								<view class="weui-cells weui-cells_after-title">
 									<view class="weui-cell weui-cell_input">
 										<input name="education" class="weui-input" bindinput="bindKeyInput" placeholder="请填写学历水平"  value="{{education}}" disabled="true"/>
+										
 									</view>
 								</view>
 							</view>
@@ -32,6 +33,7 @@
 					</view>
 				</picker>
 			</view>
+			
 			<view class="nav">
 				<text class="text">专业名称</text>
 				<view class="page-section">

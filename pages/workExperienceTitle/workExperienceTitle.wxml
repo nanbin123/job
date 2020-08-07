@@ -37,22 +37,22 @@
 					</view>
 				</view>
 			</view>
-			<view class="nav">
+			<view class="nav" bindtap="toworkContent">
 				<text class="text">工作内容</text>
 				<view class="page-section">
 					<view class="weui-cells weui-cells_after-title">
 						<view class="weui-cell weui-cell_input">
-							<input name="content" class="weui-input" bindinput="bindKeyInput" placeholder="请填写工作内容" />
+							<input name="content" class="ellipsis" bindinput="bindKeyInput" placeholder="请填写工作内容" value="{{content}}" disabled="true" />
 						</view>
 					</view>
 				</view>
 			</view>
-			<view class="nav">
+			<view class="nav" bindtap="toworkAchievement">
 				<text class="text">工作业绩</text>
 				<view class="page-section">
 					<view class="weui-cells weui-cells_after-title">
 						<view class="weui-cell weui-cell_input">
-							<input name="achievement" class="weui-input" bindinput="bindKeyInput" placeholder="请填写工作业绩" />
+							<input name="achievement" class="ellipsis" bindinput="bindKeyInput" placeholder="请填写工作业绩"  value="{{achievement}}" disabled="true" />
 						</view>
 					</view>
 				</view>

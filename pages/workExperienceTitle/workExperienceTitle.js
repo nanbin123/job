@@ -437,8 +437,6 @@ Page({
     ]
     ],
     multiIndex1: ['', ''],
-    // date:'',
-    // date1:'',
     companyName: '',
     positionType: '',
     positionName: '',
@@ -463,7 +461,16 @@ Page({
       })
     }
   },
-
+  toworkContent(){   
+    wx.navigateTo({
+      url: '/pages/workContent/workContent?content='+this.data.content,
+    })
+  },
+  toworkAchievement(){
+    wx.navigateTo({
+      url: '/pages/workAchievement/workAchievement?content='+this.data.achievement,
+    })
+  },
   bindMultiPickerChange: function (e) {
     var v = e.detail.value;
 

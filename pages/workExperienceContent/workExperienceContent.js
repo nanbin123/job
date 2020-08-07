@@ -476,7 +476,16 @@ Page({
       serviceTimeStr: this.data.multiArray[0][v[0]].name + "." + this.data.multiArray[1][v[1]].name
     })
   },
-
+  toworkContent(){   
+    wx.navigateTo({
+      url: '/pages/workContent/workContent?content='+this.data.content,
+    })
+  },
+  toworkAchievement(){
+    wx.navigateTo({
+      url: '/pages/workAchievement/workAchievement?content='+this.data.achievement,
+    })
+  },
   bindMultiPickerChange1: function (e) {
     var v = e.detail.value;
 

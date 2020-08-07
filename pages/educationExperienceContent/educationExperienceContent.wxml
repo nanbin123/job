@@ -6,12 +6,12 @@
 	</view>
 	<form bindsubmit="formSubmit" catchreset="formReset">
 		<view class="content">
-			<view class="nav">
+			<view class="nav"  bindtap="educationBindtap">
 				<text class="text">学校名称</text>
 				<view class="page-section">
 					<view class="weui-cells weui-cells_after-title">
 						<view class="weui-cell weui-cell_input">
-							<input name="school" class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请填写学校名称" value="{{school}}"/>
+							<input name="school" class="weui-input" bindinput="bindKeyInput" placeholder="请填写学校名称" value="{{school}}"/>
 						</view>
 					</view>
 				</view>
@@ -20,7 +20,7 @@
 			<view class="section">
 				<picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
 					<view class="picker">
-						<view class="nav">
+						<view class="nav" bindtap="educationBindtap">
 							<text class="text">学历水平</text>
 							<view class="page-section">
 								<view class="weui-cells weui-cells_after-title">

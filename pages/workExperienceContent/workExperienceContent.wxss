@@ -13,6 +13,12 @@ page{
   height: 150rpx;
 
 }
+.ellipsis{
+  font-size: 34rpx;
+  width: 90%;  /*必须设置宽度*/    
+  text-overflow: ellipsis; /*以省略号...显示*/
+
+}
 .titleT{
   width: 100%;
   display: block;

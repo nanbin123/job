@@ -82,6 +82,9 @@ Page({
    */
   preventTouchMove: function () {
   },  
+  educationBindtap: function(e){
+    wx.hideKeyboard()
+  },
   //学历水平
   bindMultiPickerChange: function (e) {
     var v = e.detail.value
